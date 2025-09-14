@@ -124,13 +124,13 @@
         <h2>Update a Student</h2>
 
         <label for="first_name">First Name:</label>
-        <input type="text" name="first_name" value="<?= $data['first_name'] ?>" required>
+        <input type="text" name="first_name" value="<?= html_escape($data['first_name']) ?>" required>
 
         <label for="last_name">Last Name:</label>
-        <input type="text" name="last_name" value="<?= $data['last_name'] ?>" required>
+        <input type="text" name="last_name" value="<?= html_escape($data['last_name']) ?>" required>
 
         <label for="email">Email:</label>
-        <input type="email" name="email" value="<?= $data['email'] ?>" required>
+        <input type="email" name="email" value="<?= html_escape($data['email']) ?>" required>
 
         <div class="button-group">
             <input type="submit" value="Update Student">

@@ -144,10 +144,10 @@
 
         <?php foreach ($data['students'] as $student): ?>
             <tr>
-                <td><?= $student['id'] ?></td>
-                <td><?= $student['first_name'] ?></td>
-                <td><?= $student['last_name'] ?></td>
-                <td><?= $student['email'] ?></td>
+                <td><?= html_escape($student['id']) ?></td>
+                <td><?= html_escape($student['first_name']) ?></td>
+                <td><?= html_escape($student['last_name']) ?></td>
+                <td><?= html_escape($student['email']) ?></td>
                 <td>
                     <a href="<?= site_url('students/update/' . $student['id']) ?>">Update</a> |
                     <a href="<?= site_url('students/delete/' . $student['id']) ?>" style="color: #e57373;">Delete</a>
